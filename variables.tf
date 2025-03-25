@@ -4,6 +4,18 @@ variable "profile" {
   description = "AWSプロファイル名を指定"
 }
 
+variable "prefix" {
+  type        = string
+  default     = "project"
+  description = "接頭辞としてのプロジェクト識別子を指定"
+}
+
+variable "env" {
+  type        = string
+  default     = "prod"
+  description = "環境名を指定"
+}
+
 variable "inbound_ips" {
   type = map(object({
     ip      = list(string)

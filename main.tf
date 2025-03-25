@@ -13,3 +13,13 @@ provider "aws" {
   region  = "ap-northeast-1"
   profile = var.profile
 }
+
+
+## Modules
+module "vpc" {
+  source         = "./modules/vpc"
+  prefix         = var.prefix
+  env            = var.env
+  vpc_cidr       = "10.1.0.0/16"
+  req_subnet_num = 2
+}
