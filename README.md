@@ -1,1 +1,1 @@
-# terraform-sample-for-eks
+# Terraform Sample for EKS
